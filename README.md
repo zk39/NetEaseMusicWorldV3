@@ -4,7 +4,7 @@
 
 ## 安装
 
-[![Chrome Web Store badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png)](https://chrome.google.com/webstore/detail/neteasemusicworldplus/pjcgkmiglhiambjngnljkdpoggonlnfe)
+[![Chrome Web Store badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png)](https://chrome.google.com/webstore/detail/neteasemusicworld%20/pjcgkmiglhiambjngnljkdpoggonlnfe)
 
 
 ## 使用
