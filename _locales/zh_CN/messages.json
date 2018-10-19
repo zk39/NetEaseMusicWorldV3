@@ -1,8 +1,17 @@
 {
-    "appName": {
-        "message": "NetEaseMusicWorldPlus"
+    "name": {
+        "message": "NetEaseMusicWorld+"
     },
     "description": {
         "message": "解锁网易云音乐的海外播放"
+    },
+    "closed": {
+        "message": "关闭"
+    },
+    "normal": {
+        "message": "普通"
+    },
+    "enhanced": {
+        "message": "增强"
     }
 }

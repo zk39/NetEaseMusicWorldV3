@@ -21,20 +21,20 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
 // mode switch
 chrome.browserAction.onClicked.addListener(function (tab) {
   mode = (mode + 1) % 3
-  chrome.storage.local.set({ mode: mode })
-  setModeIcon()
+  setMode()
 })
 
 // initialize
 chrome.storage.local.get('mode', function (data) {
   mode = (typeof(data.mode) === "undefined") ? 2 : data.mode
-  chrome.storage.local.set({ mode: mode })
-  setModeIcon()
+  setMode()
 })
 
-// sync ui status
-function setModeIcon(){
-  if (mode == 0) chrome.browserAction.setIcon({ path: 'images/grey.svg'})
-  else if (mode == 1) chrome.browserAction.setIcon({ path: 'images/red.svg'})
-  else if (mode == 2) chrome.browserAction.setIcon({ path: 'images/blue.svg'})
+// sync ui & storage
+function setMode(){
+  chrome.storage.local.set({ mode: mode })
+  const titles = ['closed','normal','enhanced']
+  const icons = ['images/grey.svg','images/red.svg','images/blue.svg']
+  chrome.browserAction.setIcon({ path: icons[mode] })
+  chrome.browserAction.setTitle({ title: chrome.i18n.getMessage("name") + ' ' + '[' + chrome.i18n.getMessage(titles[mode]) + ']' })
 }
