@@ -9,6 +9,6 @@
 
 ## 使用
 
-![#e60026](https://placehold.it/15/e60026/000000?text=+) 普通模式: 同 [acgotaku/NetEaseMusicWorld](https://github.com/acgotaku/NetEaseMusicWorld) 原版功能
+- 普通模式: 同 [acgotaku/NetEaseMusicWorld](https://github.com/acgotaku/NetEaseMusicWorld) 原版功能
 
-![#4285f4](https://placehold.it/15/4285f4/000000?text=+) 增强模式: 重定向解决海外 CDN 分发问题, 无需写入 hosts
+- 增强模式: 重定向解决海外 CDN 分发问题, 无需写入 hosts

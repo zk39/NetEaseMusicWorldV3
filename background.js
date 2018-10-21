@@ -15,7 +15,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
   const redirectUrl = details.url.replace(
     /(m\d+?)(?!c)\.music\.126\.net/, '$1c.music.126.net'
   )
-  if (mode > 1) return { redirectUrl: redirectUrl }
+  if (redirectUrl != details.url && mode > 1) return { redirectUrl: redirectUrl }
 }, { urls: ['*://*.music.126.net/*'] }, ['blocking'])
 
 // mode switch
