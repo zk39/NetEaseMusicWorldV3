@@ -1,12 +1,10 @@
 let mode
 
 chrome.webRequest.onBeforeSendHeaders.addListener(details => {
-	if (details.url.includes('163')) {
-		if (mode > 0) details.requestHeaders.push({
-			name: 'X-Real-IP',
-			value: '118.88.88.88'
-		})
-	}
+	if (mode > 0) details.requestHeaders.push({
+		name: 'X-Real-IP',
+		value: '118.88.88.88'
+	})
 	return {requestHeaders: details.requestHeaders}
 }, {urls: ['*://music.163.com/*']}, ['blocking', 'requestHeaders'])
 
