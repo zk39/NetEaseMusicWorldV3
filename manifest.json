@@ -17,8 +17,8 @@
 	},
 	"browser_action": {},
 	"manifest_version": 2,
-	"permissions": [ "*://music.163.com/", "storage", "webRequest", "webRequestBlocking" ],
+	"permissions": ["*://music.163.com/", "*://*.music.126.net/", "storage", "webRequest", "webRequestBlocking"],
 	"name": "__MSG_name__",
 	"author": "nondanee",
-	"version": "0.0.4"
+	"version": "0.0.5"
 }

@@ -1,12 +1,20 @@
 let mode
 
 chrome.webRequest.onBeforeSendHeaders.addListener(details => {
-	if (mode > 0) details.requestHeaders.push({
-		name: 'X-Real-IP',
-		value: '118.88.88.88'
-	})
+	if (details.url.includes('music.163.com')) {
+		if (mode > 0) details.requestHeaders.push({
+			name: 'X-Real-IP',
+			value: '118.88.88.88'
+		})
+	}
+	else if (details.url.includes('music.126.net')) {
+		if (/m\d+c/.test(details.url)) details.requestHeaders.push({
+			name: 'Cache-Control',
+			value: 'no-cache'
+		})
+	}
 	return {requestHeaders: details.requestHeaders}
-}, {urls: ['*://music.163.com/*']}, ['blocking', 'requestHeaders'])
+}, {urls: ['*://music.163.com/*', '*://*.music.126.net/*']}, ['blocking', 'requestHeaders'])
 
 chrome.browserAction.onClicked.addListener(() => {
 	mode = (mode + 1) % 3
