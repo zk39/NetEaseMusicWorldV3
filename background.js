@@ -4,7 +4,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(details => {
 	if (details.url.includes('music.163.com')) {
 		if (mode > 0) details.requestHeaders.push({
 			name: 'X-Real-IP',
-			value: '118.88.88.88'
+			value: '211.161.244.70'
 		})
 	}
 	else if (details.url.includes('music.126.net')) {
