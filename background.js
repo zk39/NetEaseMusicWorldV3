@@ -28,12 +28,12 @@ const sync = () => {
 	chrome.browserAction.setTitle({ title: `${chrome.i18n.getMessage('name')} [${chrome.i18n.getMessage(title[mode])}]` })
 }
 
-chrome.storage.local.get('mode', data => {
-	mode = data.mode == null ? 2 : data.mode
+chrome.browserAction.onClicked.addListener(() => {
+	mode = (mode + 1) % 3
 	sync()
 })
 
-chrome.browserAction.onClicked.addListener(() => {
-	mode = (mode + 1) % 3
+chrome.storage.local.get('mode', data => {
+	mode = data.mode == null ? 2 : data.mode
 	sync()
 })
