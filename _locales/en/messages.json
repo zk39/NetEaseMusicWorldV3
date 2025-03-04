@@ -1,0 +1,17 @@
+{
+    "name": {
+        "message": "NetEaseMusicWorld+"
+    },
+    "description": {
+        "message": "Unlock NetEase Music for World"
+    },
+    "closed": {
+        "message": "Closed"
+    },
+    "normal": {
+        "message": "Normal"
+    },
+    "enhanced": {
+        "message": "Enhanced"
+    }
+}

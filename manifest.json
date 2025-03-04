@@ -1,0 +1,49 @@
+{
+	"manifest_version": 3,
+	"name": "__MSG_name__",
+	"description": "__MSG_description__",
+	"default_locale": "en",
+	"version": "0.0.6",
+	"author": ["nondanee", "zk39 <carlzh23@gmail.com>"],
+
+	"icons": {
+		"16": "images/logo16.png",
+		"48": "images/logo48.png",
+		"128": "images/logo128.png"
+	},
+
+	"action": {},
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	},
+
+	"content_scripts": [{
+		"matches": ["*://music.163.com/*"],
+		"js": ["script.js"],
+		"run_at": "document_start"
+	}],
+	"declarative_net_request": {
+		"rule_resources": [{
+			"id": "ruleset",
+			"enabled": true,
+			"path": "rules.json"
+		}]
+	},
+	"web_accessible_resources": [{
+		"resources": ["inject.js"
+
+		],
+		"matches": ["*://music.163.com/*"]
+	}],
+
+	"permissions": [
+		"storage",
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess"
+	],
+	"host_permissions": [
+		"*://music.163.com/",
+		"*://*.music.126.net/"
+	]
+}
