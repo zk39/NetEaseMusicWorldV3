@@ -6,8 +6,6 @@
 	"default_locale": "en",
 	"version": "0.0.6",
 	"author": ["nondanee", "zk39 <carlzh23@gmail.com>"],
-
- 
 	"icons": {
 		"16": "images/logo16.png",
 		"48": "images/logo48.png",
