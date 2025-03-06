@@ -3,8 +3,7 @@
 解锁网易云音乐网页版海外限制
 
 ## 安装
-
-[![Chrome](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/neteasemusicworld%20/pjcgkmiglhiambjngnljkdpoggonlnfe) [![Firefox](https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png)](https://addons.mozilla.org/zh-CN/firefox/addon/neteasemusicworldplus/)
+直接导入本地extension即可
 
 ## 使用
 
