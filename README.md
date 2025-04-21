@@ -12,6 +12,7 @@
 - 增强模式: "重定向"解决海外 CDN 分发问题, 无需写入 hosts
 
 ## 说明
+首次加载可能需要重启Chrome浏览器
 
 因云村网页版播放器改为 XHR (fetch) 实现, 发出的 OPTIONS 请求被重定向后返回非 2XX 状态码导致预检失败, 此异常会导致歌曲播放进度记录出现问题 (下一首歌不从头开始播放 [#1](https://github.com/nondanee/NetEaseMusicWorldPlus/issues/1)), 不重定向 OPTIONS 请求又会因 DNS 解析失败而报错, 引发相同问题, 进退两难 (onBeforeRequest 无法直接返回 response, 只能重定向)。
 
