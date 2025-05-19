@@ -1,6 +1,7 @@
-# NetEaseMusicWorld+
+# NetEaseMusicWorldV3
 
 解锁网易云音乐网页版海外限制
+应用v3 api
 
 ## 安装
 直接导入本地extension即可
