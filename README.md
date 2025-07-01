@@ -4,7 +4,7 @@
 应用v3 api
 
 ## 安装
-直接导入本地extension即可
+直接在chrome://extensions/ 导入即可
 
 ## 使用
 
